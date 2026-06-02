@@ -82,7 +82,7 @@ st.markdown("""
 # ─────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"U:\unified mentorship\project 2\Nassau Candy Distributor.csv")
+    df = pd.read_csv("data/Nassau Candy Distributor.csv")
     # Parse dates  (dd-mm-yyyy format)
     df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=True, errors="coerce")
     df["Ship Date"]  = pd.to_datetime(df["Ship Date"],  dayfirst=True, errors="coerce")
